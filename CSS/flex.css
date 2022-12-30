@@ -1,0 +1,108 @@
+/* flex display property */
+.flex{
+    display: flex;
+}
+.inline{
+    display: inline;
+}
+
+.block{
+    display: block;
+}
+
+
+/*
+align-item : vetical manage container
+*/
+.item-centre{
+    align-items: center;
+}
+.item-start{
+    align-items: flex-start;
+}
+.item-end{
+    align-items: flex-end;
+}
+
+.flex-grow{
+    flex-grow: 1;
+}
+/* The "align-items: stretch;" stretches the flex items to fill the container (this is default) */
+.item-stretch{
+    align-items: stretch;
+}
+
+.grid{
+    display: grid;
+}
+.grid-template-column{
+    grid-template-columns: repeat(auto-fit , minmax(270px , 1fr));
+     place-items:center;
+     place-content: center;
+}
+
+/* this baseline arranges the content on the container in the same height */
+
+
+
+/* justify-content: manage horizonatal */
+
+
+.justify-centre{
+    justify-content: center;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.justify-evenly{
+    justify-content: space-evenly;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-stretch{
+    justify-content: stretch;
+}
+
+/* flex-direction */
+.flex-col{
+    flex-direction: column;
+}
+.flex-col-rev{
+    flex-direction: column-reverse;
+}
+.flex-row{
+    flex-direction: row;
+}
+.flex-row-rev{
+    flex-direction: row-reverse;
+}
+
+
+/* align-content */
+.align-centre{
+    align-content: center;
+}
+.align-start{
+    align-content: flex-start;
+}
+.align-end{
+    align-content: flex-end;
+}
+.align-around{
+    align-content: space-around;
+}
+.align-between{
+    align-content: space-between;
+}
+
+.align-stretch{
+    align-content: stretch;
+}
+/* flex-wrap */
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-unwrap{
+    flex-wrap: nowrap;
+}

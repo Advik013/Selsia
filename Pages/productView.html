@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../CSS/main.css.css">
+</head>
+
+<body>
+	<section id="navbar"></section>
+
+	<section id="side-bar"></section>
+	<div class="h-16 ">
+		<div class="lnjn"></div>
+	</div>
+
+
+
+	<section id="productview" class=" h-screen flex
+ ">
+
+<script>
+	let productview = document.getElementById('productview');
+	if(localStorage.getItem('porductView') !=null){
+    
+	let productHtml = localStorage.getItem('porductView');
+   let productHtmlarray = JSON.parse(productHtml);
+   
+	 productview.innerHTML = `
+	 <div class="w-16 hide"></div>
+		  <div class="porductview-conatiner  w-full  flex p-1 h-fit    f-d-r  ">
+			  <div class="image-contain  w-full centre p-1 ">
+				  <img src=${productHtmlarray['image src']}
+					  alt="product-image" class="object-contain">
+			  </div>
+			  <div class="alldetails  w-full h-full p-1 flex flex-col justify-between">
+				  <div class="basic-detail  h-fit  p-1 flex flex-col overflow overflow-y ">
+					  <!-- <div class="type-categories  p-1 m-0 ">
+						  <p class="m-0  p-0 pl-2 pr-2 text-center rounded-xl border-xs w-fit -xs ">
+							  Shirt
+						  </p>
+					  </div> -->
+  
+					  <div class="name    p-1 m-0">
+						  <p class="m-0  p-0 pl-2 pr-2  rounded-xl w-fit text-sm font-thin text-gray font-serif  ">
+						  ${productHtmlarray['name']}
+						  </p>
+					  </div>
+					  <div class="price   p-1 m-0">
+  
+						  <p class="m-0  p-0 pl-2 pr-2  rounded-xl w-fit font-thin text-2xl ">
+							₹  ${productHtmlarray['price']}
+						  </p>	
+					  </div>
+					  <div class="item-counter  flex p-0 w-1-2  item-centre">
+							<div class="plus p-0 border-xs m-1 h-10 w-10 flex justify-centre item-centre rounded text-center pointer"
+								id="plus">+</div>
+							<div class="count p-0 border-xs m-1 h-10 w-10 flex justify-centre item-centre rounded text-center "
+								id="count">3</div>
+							<div class="minus p-0 border-xs m-1 h-10 w-10 flex justify-centre item-centre rounded text-center pointer"
+								id="minus">-</div>
+						</div>
+					  <div class="color   p-1 m-0">
+						  <p class="m-0 ">Color </p>
+						  <div class="color-container available-color flex m-0">
+						  <div class=" p-1 m-0  w-fit rounded -xs color-setter ">
+						 <span class="block h-5 w-5 rounded-xl bg-green " ></span></div>
+					   
+						  
+					  </div>
+					  </div>
+  
+					  <div class="size m-0 p-1 ">
+						  <p class="m-0 ">Size </p>
+						  <div class="color-container available-color flex m-0">
+						  <div class=" p-1 m-0  w-fit rounded -xs color-setter ">
+						 <span class="block h-5 w-5 centre " >
+						  L
+						 </span></div>
+					   
+						  
+					  </div>
+					  </div>
+				  </div>
+  
+				  <div class="buy cart-button  h-fit p-1 center w-full  ">
+					  <div class="buy-now w-full  p-0 ">
+						  <a href="./checkout.html">
+						  <button class="w-full h-10 text-white font-bold text-xl bg-green border-none">Proceed to Checkout</button>
+						  </a>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	 
+	 `
+  
+  }
+</script>
+
+</section>
+
+
+
+
+
+</body>
+
+<script src="../JAVASCRIPT/nav.js"></script>
+<script src="../JAVASCRIPT/sidebar.js"></script>
+<script src="../JAVASCRIPT/main.js"></script>
+<script src="../JAVASCRIPT/controll.js"></script>
+
+
+</html>

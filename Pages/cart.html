@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../CSS/main.css.css">
+</head>
+
+<body>
+	<section id="navbar"></section>
+
+	<section id="side-bar"></section>
+<div class="h-16 "><div class="lnjn"></div></div>
+
+	<section id="shopping-cart" class="bord min-h-screen">
+		<div class="category-heading p-2 text-center   text-3xl ">
+			Shopping Cart
+		</div>
+		<hr>
+		<div class="item-cart-container m-1 flex P-2">
+			<div class="w-16 hide"></div>
+			<div class="cartiter w-full p-0 m-1   flex flex-col" id="cart-item">
+				<script>
+					let cartIitem = document.getElementById('cart-item');
+					let cartData = localStorage.getItem('cartProduct') ;
+					(!cartData)?(cartIitem.innerHTML = `<h1>your cart is empty</h1>`):(JSON.parse(cartData).forEach(element => {
+						cartIitem.innerHTML += `
+						
+						<div class="cart-items  w-full p-0 flex flex-wrap d-f-r rounded-sm bg-wth shadow-all mb-2 ">
+					<div class="image name price w-full p-0  flex">
+						<div class="image   w-1-2 text-center">
+										
+							<img src= ${element['image src']}    
+								alt="cart" class="h-40">
+						</div>
+						<div class="name price  w-1-2">
+
+							<div class="name p-1 text-xs  h-1-2">
+								<span>
+                                ${element['name']}
+								</span>
+							</div>
+							<div class="price flex justify-start item-centre pl-2 font-bold text-3xl  h-1-2 ">
+								<span>
+									<span class="font-satisfy text-xs ">Rs</span>
+									<span id="price" class="font-satisfy">
+										${element['price']}
+									</span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="function-controller w-full p-0  h-40 flex">
+						<div class="item-counter  flex p-0 w-1-2 justify-centre item-centre">
+							<div class="plus-s incdec p-0 border-xs m-1 h-10 w-10 flex justify-centre item-centre rounded text-center pointer"
+								>+</div>
+							<div class="count-s incdec p-0 border-xs m-1 h-10 w-10 flex justify-centre item-centre rounded text-center "
+								>3</div>
+							<div class="minus-s incdec p-0 border-xs m-1 h-10 w-10 flex justify-centre item-centre rounded text-center pointer"
+								>-</div>
+						</div>
+						<div class="remove w-1-2 centre pointer" id="remove">
+							<div title = ${element['id']} class="rmv-btn incdec p-0 border-xs m-1 h-10 w-10 centre rounded">
+								<i class="fa fa-trash"></i>
+							</div>
+							<div id="buy-btn" class="minus p-0  m-1 h-10 w-fit border-xs centre pl-2 pr-2 text-white bg-black rounded pointer">
+								
+								buy
+							</div>
+						</div>
+					</div>
+				</div>
+						`;
+					}))
+				</script>
+				
+			</div>
+		</div>
+
+		<div class="checkout text-white font-serif m-1  p-1 text-2xl bg-green w-fit float-right rounded pointer"
+			id="checkout">
+			Checkout
+		</div>
+	</section>
+
+
+
+	<footer id="footer" ></footer>
+</body>
+
+<script src="../JAVASCRIPT/nav.js"></script>
+<script src="../JAVASCRIPT/sidebar.js"></script>
+<script src="../JAVASCRIPT/main.js"></script>
+<script src="../JAVASCRIPT/controll.js"></script>
+<script src="../JAVASCRIPT/footer.js"></script>
+
+</html>

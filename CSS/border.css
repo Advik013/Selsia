@@ -1,0 +1,41 @@
+
+.border{
+    border: 2px solid gray;
+}
+.rounded-sm{
+    border-radius: .2rem;
+}
+.rounded-xl{
+    border-radius: 2vh;
+}
+.bg-image{
+    background-image: url("../image/bgimage.png");
+    background-repeat:no-repeat ;
+    background-position: center;
+    border-right-color: antiquewhite;
+    
+}
+.bg-image-footer{
+    background-image: linear-gradient(to right bottom, #479264, #56935e, #649358, #719353, #7d934f);
+    background-repeat:no-repeat ;
+    background-position: center;
+    background-size: cover;
+    
+    
+}
+.blende{
+    mix-blend-mode: color-burn;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+.overflow-x{
+    overflow-x: auto;
+}
+.overflow-y{
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
